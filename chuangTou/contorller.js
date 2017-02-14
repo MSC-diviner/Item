@@ -1,4 +1,5 @@
 var module = angular.module('Item.chuangTou', [
+    'ngRoute'
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/chuangTou', {

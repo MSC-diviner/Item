@@ -13,10 +13,10 @@
         <div class=" wrapper">
             <div class="logo"><a href="" title="科技网" target="_self">科技网</a ></div>
             <ul class="nav">
-                <li class="glyphicon1"><strong><a href="#/shouYe" title="" target="_self"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;首页</a ></strong>
-                    <dl></dl>
+                <li class="glyphicon1"><strong><a href="#/shouYe" title=""><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;首页</a ></strong>
+
                 </li>
-                <li class="glyphicon1"><strong><a href="#/View" title="" target="_self"><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="#/View" title=""><span class="glyphicon
 glyphicon-book"></span>&nbsp;&nbsp;观点</a ></strong>
                     <dl>
                         <em></em>
@@ -26,7 +26,7 @@ glyphicon-book"></span>&nbsp;&nbsp;观点</a ></strong>
                         <dd><a href="" title="" target="_self">通信</a ></dd>
                     </dl>
                 </li>
-                <li class="glyphicon1"><strong><a href="#/chuangTou" title="" target="_self"><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="#/chuangTou" title=""><span class="glyphicon
 glyphicon-send"></span>&nbsp;&nbsp;创投</a ></strong>
                     <dl>
                         <em></em>
@@ -36,7 +36,7 @@ glyphicon-send"></span>&nbsp;&nbsp;创投</a ></strong>
                         <dd><a href="" title="" target="_self">投资</a ></dd>
                     </dl>
                 </li>
-                <li class="glyphicon1"><strong><a href="#/shangye" title="" target="_self"><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="#/shangye" title=""><span class="glyphicon
 glyphicon-list-alt"></span>&nbsp;&nbsp;商业</a ></strong>
                     <dl>
                         <em></em>
@@ -44,7 +44,8 @@ glyphicon-list-alt"></span>&nbsp;&nbsp;商业</a ></strong>
                         <dd><a href="" title="" target="_self">案例</a ></dd>
                     </dl>
                 </li>
-                <li class="glyphicon1"><strong><a href="#/zhiKe" title="" target="_self"><span class="glyphicon
+                <!-- target="_self"只在本页面跳转-->
+                <li class="glyphicon1"><strong><a href="#/zhiKe" title=""><span class="glyphicon
 glyphicon-th"></span>&nbsp;&nbsp;智客</a ></strong>
                     <dl>
                         <em></em>
@@ -52,7 +53,7 @@ glyphicon-th"></span>&nbsp;&nbsp;智客</a ></strong>
                         <dd><a href="" title="" target="_self">评测</a ></dd>
                     </dl>
                 </li>
-                <li class="glyphicon1"><strong><a href="#/kuaiBo" target="_self"><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="#/kuaiBo"><span class="glyphicon
 glyphicon-plane"></span>&nbsp;&nbsp;快报</a ></strong>
                     <dl>
                         <em></em>
@@ -80,7 +81,9 @@ glyphicon-plane"></span>&nbsp;&nbsp;快报</a ></strong>
             </div>
         </div>
     </div>
-    <h1 style="padding: 100px">{{title}}</h1>
+    <div ng-view="">
+
+    </div>
 </div>
 
 <script type="text/javascript">
@@ -92,14 +95,14 @@ glyphicon-plane"></span>&nbsp;&nbsp;快报</a ></strong>
         glys[i].index = i;
         glys[i].onmouseover = function () {
             for (var j = 0;j < dls.length;j++){
-                if (this.index == j){
+                if (this.index == j + 1){
                     dls[j].style.display = "block";
                 }
             }
         };
         glys[i].onmouseout = function () {
             for (var j = 0;j < dls.length;j++){
-                if (this.index == j){
+                if (this.index == j + 1){
                     dls[j].style.display = "none";
                 }
             }
@@ -120,15 +123,16 @@ glyphicon-plane"></span>&nbsp;&nbsp;快报</a ></strong>
         'Item.kuaiBo',
         'Item.shangye',
         'Item.View',
-        "Item.zhiKe"
+        "Item.zhiKe",
+        "Item.shouYe"
     ]);
     app.config(['$routeProvider',function ($routeProvider) {
         $routeProvider.otherwise({
-            redirectTo:'/shouYe'
+            redirectTo:'/chuangTou'
         });
     }]);
     app.controller('NavController',['$scope',function ($scope) {
-         $scope.title = "shouye";
+
     }]);
 </script>
 <script src="chuangTou/contorller.js"></script>
@@ -136,5 +140,6 @@ glyphicon-plane"></span>&nbsp;&nbsp;快报</a ></strong>
 <script src="shangye/contorller.js"></script>
 <script src="View/contorller.js"></script>
 <script src="zhiKe/contorller.js"></script>
+<script src="shouYe/contorller.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 var module = angular.module('Item.shangye', [
-
+    'ngRoute'
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/shangye', {

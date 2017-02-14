@@ -1,5 +1,5 @@
 var module = angular.module('Item.View', [
-
+    'ngRoute'
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/View', {
