@@ -2,9 +2,141 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="../yinYong/angular-route.js"></script>
+    <script src="../yinYong/angular.js"></script>
     <title>Title</title>
 </head>
-<body>
+<body ng-app="app">
+<div id="wrap">
+    <div class="topbar">
+        <div class=" wrapper">
+            <div class="logo"><a href="" title="科技网" target="_self">科技网</a ></div>
+            <ul class="nav" ng-controller="NavController">
+                <li class="glyphicon1"><strong><a href="#/shouYe/1" title="" target="_self"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;首页</a ></strong>
+                    <dl></dl>
+                </li>
+                <li class="glyphicon1"><strong><a href="#/View/1" title="" target="_self"><span class="glyphicon
+glyphicon-book"></span>&nbsp;&nbsp;观点</a ></strong>
+                    <dl>
+                        <em></em>
+                        <dd><a href="" title="" target="_self">观点</a ></dd>
+                        <dd><a href="" title="" target="_self">电商</a ></dd>
+                        <dd><a href="" title="" target="_self">传媒</a ></dd>
+                        <dd><a href="" title="" target="_self">通信</a ></dd>
+                    </dl>
+                </li>
+                <li class="glyphicon1"><strong><a href="#/chuangTou/1" title="" target="_self"><span class="glyphicon
+glyphicon-send"></span>&nbsp;&nbsp;创投</a ></strong>
+                    <dl>
+                        <em></em>
+                        <dd><a href="" title="" target="_self">创业</a ></dd>
+                        <dd><a href="" title="" target="_self">人物</a ></dd>
+                        <dd><a href="" title="" target="_self">金融</a ></dd>
+                        <dd><a href="" title="" target="_self">投资</a ></dd>
+                    </dl>
+                </li>
+                <li class="glyphicon1"><strong><a href="#/shangye/1" title="" target="_self"><span class="glyphicon
+glyphicon-list-alt"></span>&nbsp;&nbsp;商业</a ></strong>
+                    <dl>
+                        <em></em>
+                        <dd><a href="" title="" target="_self">商业</a ></dd>
+                        <dd><a href="" title="" target="_self">案例</a ></dd>
+                    </dl>
+                </li>
+                <li class="glyphicon1"><strong><a href="#/zhiKe/1" title="" target="_self"><span class="glyphicon
+glyphicon-th"></span>&nbsp;&nbsp;智客</a ></strong>
+                    <dl>
+                        <em></em>
+                        <dd><a href="" title="" target="_self">精选</a ></dd>
+                        <dd><a href="" title="" target="_self">评测</a ></dd>
+                    </dl>
+                </li>
+                <li class="glyphicon1"><strong><a href="#/kuaiBo" target="_self"><span class="glyphicon
+glyphicon-plane"></span>&nbsp;&nbsp;快报</a ></strong>
+                    <dl>
+                        <em></em>
+                        <dd><a href="/news/trend/" title="" target="_self">业界</a ></dd>
+                        <dd><a href="/news/mobile/" title="" target="_self">手机</a ></dd>
+                        <dd><a href="/news/jiadian/" title="" target="_self">家电</a ></dd>
+                        <dd><a href="/news/shouyou/" title="" target="_self">手游</a ></dd>
+                        <dd><a href="/news/marketing/" title="" target="_self">运营</a ></dd>
+                        <dd><a href="/news/qiye/" title="" target="_self">即时</a ></dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="action">
+                <a href="#" class="n1" target="_blank" title="投稿">投稿</a >
+                <div class="userbar">
+                    <div class="user">
+                        <span class="avatar"><img src="http://www.7006.top/style/images/symbol-25.png" alt=""></span>
+                        <a href="#" class="n4 head-username">账户</a >
+                        <ul class="drap">
+                            <li class="i3"><a href="" title="注  册" class="head-register">注  册</a ></li>
+                            <li class="i4"><a href="" class="head-login" title="登陆">登  陆</a ></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-view style="padding-top: 100px">
+        <h1>{{title}}</h1>
+    </div>
 
+</div>
+
+<script type="text/javascript">
+    var glys = document.getElementsByClassName("glyphicon1");
+    var dls = document.getElementsByTagName("dl");
+    var drap = document.getElementsByClassName('drap');
+    var userbar = document.getElementsByClassName('userbar');
+    for (var i = 0;i<glys.length;i++){
+        glys[i].index = i;
+        glys[i].onmouseover = function () {
+            for (var j = 0;j < dls.length;j++){
+                if (this.index == j){
+                    dls[j].style.display = "block";
+                }
+            }
+        };
+        glys[i].onmouseout = function () {
+            for (var j = 0;j < dls.length;j++){
+                if (this.index == j){
+                    dls[j].style.display = "none";
+                }
+            }
+        }
+    }
+    userbar[0].onmouseover = function () {
+        drap[0].style.display = "block";
+    };
+    userbar[0].onmouseout = function () {
+        drap[0].style.display = "none";
+    };
+/****************************angular代码***********************************/
+</script>
+<script>
+    var app = angular.module('app',[
+        'ngRoute',
+        'Item.shouYe',
+        'Item.chuangTou',
+        'Item.kuaiBo',
+        'Item.shangye',
+        'Item.View',
+        "Item.zhiKe"
+    ]);
+    app.config(['$routeProvider',function ($routeProvider) {
+        $routeProvider.otherwise({
+            redirectTo:'/shouYe'
+        });
+    }]);
+</script>
+<script src="../chuangTou/contorller.js"></script>
+<script src="../kuaiBo/contorller.js"></script>
+<script src="../shangye/contorller.js"></script>
+<script src="../View/contorller.js"></script>
+<script src="../zhiKe/contorller.js"></script>
+<script src="./contorller.js"></script>
 </body>
 </html>
