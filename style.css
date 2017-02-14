@@ -518,3 +518,75 @@ a:hover {
 .action .drap li a:hover {
     color: #00AA98;
 }
+
+.bg{
+    width: 1150px;
+    padding: 0 25px;
+    background-color: #fff;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin-top: 80px;
+
+}
+.wrap-view{
+    float: left;
+    width: 770px;
+    position: relative;
+    padding-top: 60px;
+    padding-right: 30px;
+    border-right: 1px solid #E5E5E5;
+}
+.wrap-view-left{
+    float: left;
+    width: 100px;
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    top: 0;
+    left: -25px;
+    background-color: #00AA98;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+.data{
+    padding-right: 25px;
+}
+.data-li{
+    width: 770px;
+    height: 170px;
+    padding: 10px 0;
+    border-bottom: 1px solid #E5E5E5;
+}
+.viewing{
+    width: 250px;
+    height: 165px;
+    float: left;
+    display: inline;
+    margin-right: 30px;
+    position: relative;
+}
+.div-img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    height: 165px;
+}
+.viewing1{
+   height: 165px;
+    background-color: orangered;
+}
+.standpoint {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 68px;
+    height: 30px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #00AA98;
+    text-align: center;
+    line-height: 30px;
+}

@@ -1,1 +1,22 @@
-<h1 style="padding: 100px">{{title}}</h1>
+<div class="bg">
+    <img src="" alt="">
+    <div class="wrap-view">
+        <div class="wrap-view-left">
+            观点
+        </div>
+        <ul class="data">
+
+            <li class="data-li" ng-repeat="item in data">
+                <div class="viewing">
+                    <div class="div-img">
+
+                        <a href=""><img src="" alt="" width="250px" height="165px"></a>
+                        <div class="standpoint">{{item.mark}}</div>
+                    </div>
+                </div>
+                <!--{{item.title}}-->
+                <div class="viewing1"></div>
+            </li>
+        </ul>
+    </div>
+</div>
