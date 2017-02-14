@@ -1,8 +1,8 @@
 var module = angular.module('Item.zhiKe', [
-    'ngRoute'
+    
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/zhiKe/:page', {
+    $routeProvider.when('/zhiKe', {
         templateUrl: 'zhiKe/view.html',
         controller: 'zhiKeController'
     });

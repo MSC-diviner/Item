@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <script src="../yinYong/angular-route.js"></script>
-    <script src="../yinYong/angular.js"></script>
+    <script src="yinYong/angular.js"></script>
+    <script src="yinYong/angular-route.js"></script>
     <title>Title</title>
 </head>
 <body ng-app="app">
-<div id="wrap">
+<div id="wrap" ng-controller="NavController">
     <div class="topbar">
         <div class=" wrapper">
             <div class="logo"><a href="" title="科技网" target="_self">科技网</a ></div>
-            <ul class="nav" ng-controller="NavController">
-                <li class="glyphicon1"><strong><a href="#/shouYe/1" title="" target="_self"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;首页</a ></strong>
+            <ul class="nav">
+                <li class="glyphicon1"><strong><a href="#/shouYe" title="" target="_self"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;首页</a ></strong>
                     <dl></dl>
                 </li>
-                <li class="glyphicon1"><strong><a href="#/View/1" title="" target="_self"><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="#/View" title="" target="_self"><span class="glyphicon
 glyphicon-book"></span>&nbsp;&nbsp;观点</a ></strong>
                     <dl>
                         <em></em>
@@ -26,7 +26,7 @@ glyphicon-book"></span>&nbsp;&nbsp;观点</a ></strong>
                         <dd><a href="" title="" target="_self">通信</a ></dd>
                     </dl>
                 </li>
-                <li class="glyphicon1"><strong><a href="#/chuangTou/1" title="" target="_self"><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="#/chuangTou" title="" target="_self"><span class="glyphicon
 glyphicon-send"></span>&nbsp;&nbsp;创投</a ></strong>
                     <dl>
                         <em></em>
@@ -36,7 +36,7 @@ glyphicon-send"></span>&nbsp;&nbsp;创投</a ></strong>
                         <dd><a href="" title="" target="_self">投资</a ></dd>
                     </dl>
                 </li>
-                <li class="glyphicon1"><strong><a href="#/shangye/1" title="" target="_self"><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="#/shangye" title="" target="_self"><span class="glyphicon
 glyphicon-list-alt"></span>&nbsp;&nbsp;商业</a ></strong>
                     <dl>
                         <em></em>
@@ -44,7 +44,7 @@ glyphicon-list-alt"></span>&nbsp;&nbsp;商业</a ></strong>
                         <dd><a href="" title="" target="_self">案例</a ></dd>
                     </dl>
                 </li>
-                <li class="glyphicon1"><strong><a href="#/zhiKe/1" title="" target="_self"><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="#/zhiKe" title="" target="_self"><span class="glyphicon
 glyphicon-th"></span>&nbsp;&nbsp;智客</a ></strong>
                     <dl>
                         <em></em>
@@ -80,10 +80,7 @@ glyphicon-plane"></span>&nbsp;&nbsp;快报</a ></strong>
             </div>
         </div>
     </div>
-    <div ng-view style="padding-top: 100px">
-        <h1>{{title}}</h1>
-    </div>
-
+    <h1 style="padding: 100px">{{title}}</h1>
 </div>
 
 <script type="text/javascript">
@@ -119,7 +116,6 @@ glyphicon-plane"></span>&nbsp;&nbsp;快报</a ></strong>
 <script>
     var app = angular.module('app',[
         'ngRoute',
-        'Item.shouYe',
         'Item.chuangTou',
         'Item.kuaiBo',
         'Item.shangye',
@@ -131,12 +127,14 @@ glyphicon-plane"></span>&nbsp;&nbsp;快报</a ></strong>
             redirectTo:'/shouYe'
         });
     }]);
+    app.controller('NavController',['$scope',function ($scope) {
+         $scope.title = "shouye";
+    }]);
 </script>
-<script src="../chuangTou/contorller.js"></script>
-<script src="../kuaiBo/contorller.js"></script>
-<script src="../shangye/contorller.js"></script>
-<script src="../View/contorller.js"></script>
-<script src="../zhiKe/contorller.js"></script>
-<script src="./contorller.js"></script>
+<script src="chuangTou/contorller.js"></script>
+<script src="kuaiBo/contorller.js"></script>
+<script src="shangye/contorller.js"></script>
+<script src="View/contorller.js"></script>
+<script src="zhiKe/contorller.js"></script>
 </body>
 </html>

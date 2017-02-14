@@ -1,8 +1,8 @@
 var module = angular.module('Item.View', [
-    'ngRoute'
+
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/View/:page', {
+    $routeProvider.when('/View', {
         templateUrl: 'View/view.html',
         controller: 'ViewController'
     });

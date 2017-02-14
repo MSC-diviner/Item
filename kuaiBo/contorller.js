@@ -1,8 +1,7 @@
 var module = angular.module('Item.kuaiBo', [
-    'ngRoute'
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/kuaiBo/:page', {
+    $routeProvider.when('/kuaiBo', {
         templateUrl: 'kuaiBo/view.html',
         controller: 'kuaiBoController'
     });
