@@ -25,7 +25,6 @@ module.controller('rewuController',["$scope","$http",'$routeParams','$route',fun
             function changePage(page) {
                 if (page < parseInt(response.length/10)){
                     du = (page + 1) * 10
->>>>>>> 4119db9cc6be1004996b1d4af44c2e119a153fb5
                 }else {
                     du = response.length;
                 }
