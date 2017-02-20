@@ -1,15 +1,14 @@
-
-var module = angular.module('Item.View', [
-    'ngRoute',
+var module = angular.module('Item.rewu', [
+    'ngRoute'
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/View/:page', {
-        templateUrl: 'View/view.html',
-        controller: 'ViewController'
+    $routeProvider.when('/rewu/:page', {
+        templateUrl: 'chuangTou/rewu.html',
+        controller: 'rewuController'
     });
 }]);
-module.controller('ViewController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
-    $http.get("http://localhost/Item/pHp/view.php")
+module.controller('rewuController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
+    $http.get("http://localhost/Item/pHp/dView.php")
         .success(function (response) {
             var page = parseInt($routeParams.page);
             var dataArr = [];

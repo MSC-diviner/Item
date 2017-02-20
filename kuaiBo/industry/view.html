@@ -1,0 +1,23 @@
+<div class="middle_left_nav">业界</div>
+<div class="middle_left_wrap">
+    <div class="small" ng-repeat="item in subjects">
+        <div class="small_img">
+            <div class="small_nav">{{item.mark}}</div>
+            <img ng-src="{{item.img}}" alt="">
+        </div>
+        <div class="small_text">
+            <a ng-href="{{item.url}}">{{item.title}}</a>
+            <p>{{item.content}}</p>
+            <div class="small_bottom">
+                <span>作者:{{item.author}}</span>
+                <span>{{item.date}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page">
+    <span ng-click="go(1)">1</span>
+    <span ng-click="go(2)">2</span>
+    <span ng-click="next(currentPage+1)">下一页</span>
+    <span ng-click="go(2)">尾页</span>
+</div>

@@ -1,0 +1,338 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, input, textarea, p, blockquote, th, td {
+    padding: 0;
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-weight: normal;
+    font-style: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+abbr, acronym {
+    border: 0;
+}
+
+.all{
+    background-color: #f2f2f2;
+}
+.head{
+    width: 100%;
+    background-color: white;
+}
+.head a{
+    color: white;
+    text-decoration: none;
+}
+.nav{
+    width: 100%;
+    /*height:37px;*/
+    background-color: #3E3E3E;
+    position: fixed;
+    z-index: 100;
+}
+.nav_wrap{
+    width: 1200px;
+    margin: 0 auto;
+    /*padding-top: 10px;*/
+    overflow: hidden;
+}
+.nav_wrap .left{
+    float: left;
+    overflow: hidden;
+}
+.nav_wrap .right{
+    float: right;
+}
+.nav_wrap .left li{
+    float: left;
+    /*margin-right: 20px;*/
+    padding: 10px;
+}
+.nav_wrap .left li:hover{
+    background-color: #00aa98;
+
+}
+.nav_wrap .right span{
+    /*margin-left: 10px;*/
+    display: inline-block;
+    padding: 10px;
+}
+.nav_wrap .right span:hover{
+    background-color: #00aa98;
+}
+.nav_bottom{
+    padding-top: 50px;
+    height: 80px;
+    box-shadow:0 5px 5px gray;
+
+}
+.nav_bottom_wrap{
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.nav_bottom .left{
+    float: left;
+}
+.nav_bottom .right{
+    float: left;
+    margin-left: 400px;
+}
+.nav_bottom .right .button{
+    overflow: hidden;
+}
+.nav_bottom .right .button li{
+   float: left;
+    background-color: #00aa98;
+    padding: 10px 20px;
+    margin: 10px;
+}
+.nav_bottom .right .button li:hover{
+    background-color: black;
+}
+.middle{
+    margin-top: 20px;
+}
+.middle_wrap{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.middle_left{
+
+    width: 800px;
+    padding-bottom: 20px;
+    background-color: white;
+
+}
+.middle_right{
+   width: 300px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.middle_right .logo{
+    text-align: left;
+    border-bottom: 3px solid green;
+    padding-bottom: 9px;
+    font-size: 20px;
+}
+.middle_right img{
+    width: 250px;
+}
+.middle_right div{
+    margin-top: 20px;
+}
+.middle_right_div2 div{
+border-bottom: 2px solid lightgray;
+    margin-bottom: 20px;
+padding-bottom: 10px;
+}
+.middle_right_div2 span:before{
+    content: url("http://www.7006.top/style/images/symbol-7.png");
+    margin-right: 5px;
+}
+
+.middle_right_div2 img{
+    height: 150px;
+}
+.middle_right .text{
+    border: 0;
+    font-size: 13px;
+}
+.middle_right_div7 span:before{
+    content: url("http://www.7006.top/style/images/symbol-9.png");
+}
+.middle_right a{
+    text-decoration: none;
+    color: black;
+}
+.middle_right a:hover{
+    color: #00aa98;
+}
+
+.middle_left_nav{
+    color: white;
+    width:100px;
+    height: 30px;
+    font-size: 20px;
+    background-color: #00aa98;
+    line-height: 30px;
+    text-align: center;
+}
+.middle_left_wrap{
+    padding: 50px 30px;
+}
+.small{
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid lightgray;
+    padding: 10px 0;
+}
+.small_nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    width:80px;
+    height: 30px;
+    font-size: 16px;
+    background-color: #00aa98;
+    line-height: 30px;
+    text-align: center;
+}
+.small img{
+    width: 250px;
+    height: 160px;
+    float: left;
+
+}
+
+.small_img{
+    position: relative;
+}
+.small_img:after{
+    content: "+";
+    color: white;
+    font-size: 50px;
+    width: 250px;
+    height: 160px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    line-height: 160px;
+    text-align: center;
+    display: none;
+}
+.small_img:hover:after{
+    display: block;
+}
+.small .small_text{
+    width: 400px;
+    float: left;
+    margin-left: 20px;
+}
+.small_text a{
+  text-decoration: none;
+    font:  bolder 18px arial;
+}
+.small_text a:hover{
+    color: #00aa98;
+}
+.small_text p{
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: 10px;
+}
+.small_bottom span{
+    font-size: 12px;
+}
+.small_bottom span:nth-of-type(1):before{
+    content: url("http://www.7006.top/style/images/symbol-9.png");
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+}
+.small_bottom span:nth-of-type(2):before{
+    content: url("http://www.7006.top/style/images/symbol-11.png");
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+}
+.small_bottom span:nth-of-type(2){
+    margin-left: 50px;
+}
+.page{
+    margin-top: 50px;
+    text-align: center;
+}
+.page span{
+    padding: 5px 10px;
+    background-color: #00aa98;
+    color: white;
+    margin: 0 2px;
+}
+.page span:hover{
+    background-color: black;
+}
+.footer{
+    margin-top: 50px;
+}
+.footer_top{
+    height: 20px;
+    background-color: #00aa98;
+}
+.footer_bottom{
+    background-color: #333;
+    color: white;
+}
+.footer_wrap{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+}
+.footer_small{
+    width: 32%;
+    float: left;
+    margin-right: 10px;
+    border-right: 1px solid #6b6a6a;
+}
+.footer_small .footer_title{
+    color: #00aa98;
+    margin-bottom: 20px;
+
+}
+.footer_small p{
+    color: white;
+    font-size: 12px;
+    line-height: 20px;
+    padding-right: 10px;
+    float:left;
+}
+.footer_small img{
+    margin-right: 5px;
+}
+#up{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #00aa98;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+}

@@ -1,15 +1,14 @@
-
-var module = angular.module('Item.View', [
-    'ngRoute',
+var module = angular.module('Item.chuangye', [
+    'ngRoute'
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/View/:page', {
-        templateUrl: 'View/view.html',
-        controller: 'ViewController'
+    $routeProvider.when('/shangye/:page', {
+        templateUrl: 'chuangTou/chuangye.html',
+        controller: 'chuangYeController'
     });
 }]);
-module.controller('ViewController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
-    $http.get("http://localhost/Item/pHp/view.php")
+module.controller('chuangYeController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
+    $http.get("http://localhost/Item/pHp/cView.php")
         .success(function (response) {
             var page = parseInt($routeParams.page);
             var dataArr = [];

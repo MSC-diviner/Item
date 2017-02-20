@@ -1,15 +1,14 @@
-
-var module = angular.module('Item.View', [
-    'ngRoute',
+var module = angular.module('Item.touzi', [
+    'ngRoute'
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/View/:page', {
-        templateUrl: 'View/view.html',
-        controller: 'ViewController'
+    $routeProvider.when('/touzi/:page', {
+        templateUrl: 'chuangTou/touzi.html',
+        controller: 'touZiController'
     });
 }]);
-module.controller('ViewController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
-    $http.get("http://localhost/Item/pHp/view.php")
+module.controller('touZiController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
+    $http.get("http://localhost/Item/pHp/touzi.php")
         .success(function (response) {
             var page = parseInt($routeParams.page);
             var dataArr = [];
@@ -60,3 +59,6 @@ module.controller('ViewController',["$scope","$http",'$routeParams','$route',fun
             }
         })
 }]);
+
+
+

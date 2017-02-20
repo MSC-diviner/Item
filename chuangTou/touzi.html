@@ -1,11 +1,11 @@
 <div class="bg">
     <div class="wrap-view">
         <div class="wrap-view-left">
-            观点
+            投资
         </div>
         <ul class="data">
 
-            <li class="data-li" ng-repeat="item in items">
+            <li class="data-li" ng-repeat="item in items track by $index">
                 <div class="viewing">
                     <div class="div-img">
 
@@ -24,8 +24,9 @@
         <div class="pageb">
             <a ng-click="go(0)" ng-class="{dropup:true}">1</a>
             <a ng-click="go(1)" ng-class="{dropup:page === 1}">2</a>
+            <a ng-click="go(2)" ng-class="{dropup:page === 2}">3</a>
             <a ng-click="nextPage(currentPage + 1)">下一页</a>
-            <a ng-click="go(1)">尾页</a>
+            <a ng-click="go(2)">尾页</a>
         </div>
     </div>
     <div class="list">

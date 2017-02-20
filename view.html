@@ -13,30 +13,32 @@
         <div class=" wrapper">
             <div class="logo"><a href="" title="科技网" target="_self">科技网</a ></div>
             <ul class="nav">
-                <li class="glyphicon1"><strong><a href="#/shouYe" title=""><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;首页</a ></strong>
+                <li class="glyphicon1"><strong><a href="#/shouYe/1" title=""><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;首页</a ></strong>
+
+
 
                 </li>
-                <li class="glyphicon1"><strong><a href="#/View" title=""><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="#/View/1" title=""><span class="glyphicon
 glyphicon-book"></span>&nbsp;&nbsp;观点</a ></strong>
                     <dl>
                         <em></em>
-                        <dd><a href="" title="" target="_self">观点</a ></dd>
-                        <dd><a href="" title="" target="_self">电商</a ></dd>
-                        <dd><a href="" title="" target="_self">传媒</a ></dd>
-                        <dd><a href="" title="" target="_self">通信</a ></dd>
+                        <dd><a href="#/a/0" title="" target="_self">观点</a ></dd>
+                        <dd><a href="#/b/0" title="" target="_self">电商</a ></dd>
+                        <dd><a href="#/chuanmei/0" title="" target="_self">传媒</a ></dd>
+                        <dd><a href="#/jingxuan/0" title="" target="_self">通信</a ></dd>
                     </dl>
                 </li>
-                <li class="glyphicon1"><strong><a href="#/chuangTou" title=""><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="#/chuangTou/1" title=""><span class="glyphicon
 glyphicon-send"></span>&nbsp;&nbsp;创投</a ></strong>
                     <dl>
                         <em></em>
-                        <dd><a href="" title="" target="_self">创业</a ></dd>
-                        <dd><a href="" title="" target="_self">人物</a ></dd>
-                        <dd><a href="" title="" target="_self">金融</a ></dd>
-                        <dd><a href="" title="" target="_self">投资</a ></dd>
+                        <dd><a href="#/shangye/0" title="" target="_self">创业</a ></dd>
+                        <dd><a href="#/rewu/0" title="" target="_self">人物</a ></dd>
+                        <dd><a href="#/jinrong/0" title="" target="_self">金融</a ></dd>
+                        <dd><a href="#/touzi/0" title="" target="_self">投资</a ></dd>
                     </dl>
                 </li>
-                <li class="glyphicon1"><strong><a href="#/shangye" title=""><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="" title=""><span class="glyphicon
 glyphicon-list-alt"></span>&nbsp;&nbsp;商业</a ></strong>
                     <dl>
                         <em></em>
@@ -45,7 +47,7 @@ glyphicon-list-alt"></span>&nbsp;&nbsp;商业</a ></strong>
                     </dl>
                 </li>
                 <!-- target="_self"只在本页面跳转-->
-                <li class="glyphicon1"><strong><a href="#/zhiKe" title=""><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="kuaiBo/navigation.html" title=""><span class="glyphicon
 glyphicon-th"></span>&nbsp;&nbsp;智客</a ></strong>
                     <dl>
                         <em></em>
@@ -53,16 +55,16 @@ glyphicon-th"></span>&nbsp;&nbsp;智客</a ></strong>
                         <dd><a href="" title="" target="_self">评测</a ></dd>
                     </dl>
                 </li>
-                <li class="glyphicon1"><strong><a href="#/kuaiBo"><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="kuaiBo/navigation.html"><span class="glyphicon
 glyphicon-plane"></span>&nbsp;&nbsp;快报</a ></strong>
                     <dl>
                         <em></em>
-                        <dd><a href="/news/trend/" title="" target="_self">业界</a ></dd>
-                        <dd><a href="/news/mobile/" title="" target="_self">手机</a ></dd>
-                        <dd><a href="/news/jiadian/" title="" target="_self">家电</a ></dd>
-                        <dd><a href="/news/shouyou/" title="" target="_self">手游</a ></dd>
-                        <dd><a href="/news/marketing/" title="" target="_self">运营</a ></dd>
-                        <dd><a href="/news/qiye/" title="" target="_self">即时</a ></dd>
+                        <dd><a href="kuaiBo/navigation.html#/industry/1" title="" target="_self">业界</a ></dd>
+                        <dd><a href="kuaiBo/navigation.html#/phone/1" title="" target="_self">手机</a ></dd>
+                        <dd><a href="kuaiBo/navigation.html#/industry/1" title="" target="_self">家电</a ></dd>
+                        <dd><a href="kuaiBo/navigation.html#/phone/1" title="" target="_self">手游</a ></dd>
+                        <dd><a href="kuaiBo/navigation.html#/industry/1" title="" target="_self">运营</a ></dd>
+                        <dd><a href="kuaiBo/navigation.html#/phone/1" title="" target="_self">即时</a ></dd>
                     </dl>
                 </li>
             </ul>
@@ -120,23 +122,37 @@ glyphicon-plane"></span>&nbsp;&nbsp;快报</a ></strong>
     var app = angular.module('app',[
         'ngRoute',
         'Item.chuangTou',
-        'Item.kuaiBo',
         'Item.shangye',
         'Item.View',
         "Item.zhiKe",
-        "Item.shouYe"
+        "Item.shouYe",
+        "Item.a",
+        "Item.b",
+        "Item.chuangye",
+        "Item.rewu",
+        "Item.chuanmei",
+        "Item.jingxuan",
+        "Item.jinrong",
+        "Item.touzi"
     ]);
     app.config(['$routeProvider',function ($routeProvider) {
         $routeProvider.otherwise({
-            redirectTo:'/chuangTou'
+            redirectTo:'/shouYe/1'
         });
     }]);
     app.controller('NavController',['$scope',function ($scope) {
 
     }]);
 </script>
+<script src="chuangTou/touzi.js"></script>
+<script src="chuangTou/jinrong.js"></script>
+<script src="View/jingxuan.js"></script>
+<script src="View/chuanmei.js"></script>
+<script src="chuangTou/bcontroller.js"></script>
+<script src="chuangTou/acontroller.js"></script>
+<script src="View/bcontroller.js"></script>
+<script src="View/acontroller.js"></script>
 <script src="chuangTou/contorller.js"></script>
-<script src="kuaiBo/contorller.js"></script>
 <script src="shangye/contorller.js"></script>
 <script src="View/contorller.js"></script>
 <script src="zhiKe/contorller.js"></script>

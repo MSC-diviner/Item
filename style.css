@@ -590,3 +590,196 @@ a:hover {
     text-align: center;
     line-height: 30px;
 }
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 5px;
+}
+.data-li h3{
+    color: #3e3e3e;
+    font-size: 14px;
+    height: 35px;
+    line-height: 26px;
+}
+.data-li p{
+    color: #3e3e3e;
+    font-size: 14px;
+    height: 102px;
+    line-height: 26px;
+}
+.data-li span{
+    background: url(http://www.7006.top/style/images/symbol-9.png) no-repeat 0 4px;
+    width: 130px;
+    display: inline-block !important;
+    zoom: 1;
+    text-indent: 20px;
+    color: #3e3e3e;
+}
+.data-li span+span{
+    background: url(http://www.7006.top/style/images/symbol-11.png) no-repeat 0 4px;
+}
+.pageb{
+    margin: 50px auto;
+    width: 560px;
+}
+.pageb a {
+    padding: 5px 10px;
+    background-color: #00AA98;
+    color: #fff;
+    font-size: 14px;
+    margin: 0 1px;
+}
+.pageb .dropup{
+    background-color: #414141;
+}
+.list{
+    float: right;
+    display: inline;
+    width: 320px;
+}
+.list-img{
+    margin-top: 20px;
+}
+.img1{
+    width: 320px;
+    height: 250px;
+}
+.hotlist{
+    margin-top: 20px;
+    margin-left: 0px;
+    position: relative;
+    background: #fff;
+}
+.hd{
+    position: absolute;
+    top: -3px;
+    right: 0px;
+}
+.hotlist .hd ul li {
+    float: left;
+    text-indent: 10px;
+    color: #8B8B8B;
+}
+.hotlist .hd ul li a{
+    outline: 0;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    position: relative;
+    top: 7px;
+}
+.com-title {
+    border-bottom: 3px solid #F5F5F5;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.list .com-title span, .main .listl .com-title span {
+    border-bottom: 3px solid #00AA98;
+    padding-bottom: 7px;
+    font-size: 18px;
+    color: #3C3B3C;
+}
+.com-title img {
+    position: relative;
+    top: 3px;
+    left: 0px;
+    margin-right: 5px;
+}
+.list .adimg2 {
+    padding-top: 20px;
+}
+.list .adimg2 img {
+    width: 320px;
+    height: 180px;
+}
+/****************/
+.list .recommend {
+    margin-top: 20px;
+}
+.ulfix {
+    overflow: auto;
+    zoom: 1;
+}
+.list .recommend ul li {
+    float: left;
+    width: 153px;
+    height: 150px;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #6b6a6a;
+}
+.list .recommend ul li img {
+    width: 150px;
+    height: 98px;
+}
+.list .recommend ul li p {
+    height: 46px;
+    line-height: 23px;
+    overflow: hidden;
+}
+.list .adimg {
+    margin-top: 20px;
+}
+.list .adimg img {
+    width: 320px;
+    height: 250px;
+}
+.list .follow {
+    margin-top: 10px;
+    height: 385px;
+    padding-top: 18px;
+}
+.list .follow .followcon2 {
+    height: 240px;
+}
+.list .follow .followcon {
+    background-color: #F4F4F4;
+    height: 260px;
+    margin-top: 7px;
+    overflow: hidden;
+}
+.mainnews .newsr .follow .followcon span, .list .follow .followcon span {
+    display: block;
+    margin: 25px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #4c4c4c;
+}
+.mainnews .newsr .follow .followcon p img, .list .follow .followcon p img {
+    margin: 0 16px;
+}
+.footer {
+    height: 54px;
+    line-height: 54px;
+    background: #3E3E3E;
+    color: #fff;
+    font-size: 14px;
+    color: #8f8f8f;
+    margin-top: 15px;
+}
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    clear: both;
+    height: auto;
+}
+.lft {
+    float: left;
+    display: inline;
+}
+.footer .rgt {
+    position: relative;
+}
+.footer a {
+    color: #8f8f8f;
+}
+.footer .rgt span {
+    display: inline-block;
+    background: url(http://www.7006.top/style/images/line2.png) no-repeat center;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 5px;
+}

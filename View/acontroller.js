@@ -1,17 +1,22 @@
-
-var module = angular.module('Item.View', [
+var module = angular.module('Item.a', [
     'ngRoute',
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/View/:page', {
-        templateUrl: 'View/view.html',
-        controller: 'ViewController'
+    $routeProvider.when('/a/:page', {
+        templateUrl: 'View/a.html',
+        controller: 'AController'
     });
 }]);
-module.controller('ViewController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
-    $http.get("http://localhost/Item/pHp/view.php")
+module.controller('AController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
+    $http.get("http://localhost/Item/pHp/aView.php")
         .success(function (response) {
             var page = parseInt($routeParams.page);
+            var count = Math.ceil(response.length/10);
+            var arr = [];
+            for (var i = 0;i < count;i++){
+                arr.push(i);
+            }
+            console.log("haha" + arr);
             var dataArr = [];
             var du = 0;
             changePage(page);

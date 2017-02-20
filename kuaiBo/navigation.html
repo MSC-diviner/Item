@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="../yinYong/angular.js"></script>
+    <script src="../yinYong/angular-route.js"></script>
+</head>
+<body ng-app="app">
+<div class="all" ng-controller="myController">
+    <div class="head">
+        <div class="nav">
+            <div class="nav_wrap">
+                <ul class="left">
+                    <li><span><a href="../view.html" target="_blank">科讯网</a> </span></li>
+                    <li><span><a href="#/industry/1" target="_self">业界</a> </span></li>
+                    <li><span><a href="#/phone/1" target="_self">手机</a> </span></li>
+                    <li><span><a href="#/industry/1" target="_self">家电</a> </span></li>
+                    <li><span><a href="#/phone/1" target="_self">手游</a> </span></li>
+                    <li><span><a href="#/industry/1" target="_self">运营</a> </span></li>
+                    <li><span><a href="#/phone/1" target="_self">即时</a> </span></li>
+                    <li class="more navgation"><span>
+<a id="button" href="javascript:void(0)">更多</a>
+</span>
+                    </li>
+                </ul>
+                <ul class="right">
+                    <li id="xiaoshi"><span><a href="" target="_blank">欢迎:游客</a></span>
+                        <span class="user_icon"><a class="head-login" target="_blank" href="">登陆</a></span>
+                        <span><a href="" target="_blank" class="head-register">注册</a></span></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="nav_bottom">
+            <div class="nav_bottom_wrap">
+                <ul class="left">
+                    <li><span><a href="../view.html"><img src="http://www.7006.top/style/css/imga/logo.jpg"/></a> </span></li>
+                </ul>
+                <ul class="right">
+                    <div class="button">
+                        <li class="bt"><span><a href="">申请报道</a> </span></li>
+                        <li class="bt"><span><a href="">在线投稿</a> </span></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="middle_wrap">
+            <div class="middle_left" ng-view="">
+
+            </div>
+            <div class="middle_right">
+                <div class="middle_right_div1">
+                    <img src="http://www.7006.top/style/images/index_v4.jpg" alt="">
+                </div>
+                <div class="middle_right_div2">
+                    <div class="logo"><span>编辑推荐</span></div>
+                    <img src="http://www.7006.top/d/file/news/shouyou/2015-03-28/606f065a8fdbd27d8acc60596312f702.jpg" alt="">
+                    <div class="text"><a href="http://www.7006.top/news/shouyou/461.html">2015年游戏行业风向标：创业者必须</a></div>
+                </div>
+                <div class="middle_right_div3">
+                    <img src="http://www.7006.top/d/file/news/shouyou/2015-03-28/f0063b44b52fece4d7a1a7e41be70d48.jpg" alt="">
+                    <div class="text"><a href="http://www.7006.top/news/shouyou/463.html">山水文化资产遭封 游戏收购恐泡</a></div>
+                </div>
+                <div class="middle_right_div4">
+                    <img src="http://www.7006.top/d/file/news/mobile/2015-03-28/c193341fcbe5ddafed99b9396c343770.png" alt="">
+                    <div class="text"><a href="http://www.7006.top/news/mobile/519.html">三星将推Orbis智能手表</a></div>
+                </div>
+                <div class="middle_right_div5">
+                    <img src="http://www.7006.top/d/file/news/mobile/2015-03-28/05679f7d33f1e28eb8d0b93f8c0dc67a.jpg" alt="">
+                    <div class="text"><a href="http://www.7006.top/news/mobile/520.html">世界上你没听说过的5款“小不点</a></div>
+                </div>
+                <div class="middle_right_div6">
+                    <img src="http://www.7006.top/style/images/index_v7.jpg" alt="">
+                </div>
+                <div class="middle_right_div7">
+                    <div class="logo"><span>合作伙伴</span></div>
+                    <img src="http://www.7006.top/style/images/index_v8.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_top"></div>
+        <div class="footer_bottom">
+            <div class="footer_wrap">
+                <div class="footer_small">
+                   <div class="footer_title">关于我们</div>
+                    <p>科讯网（7006.top）创立于2013年，是一家拥有全球视野的前沿科技媒体，我们始终秉承观点独到、全面深入、有料有趣的宗旨，在科技与人文之间寻找商业新价值，坚持以人文的视角解读科技，用专业的精神剖析时代，孜孜不倦探索科技与商业的未来。</p>
+                </div>
+                <div class="footer_small">
+                    <div class="footer_title">联系我们</div>
+                    <p>地址：上海•朝阳区•东四环中路105号腾新天地大厦8F</p>
+                    <p>顾问：上海大成律师事务所</p>
+                    <p>警告：未经过本网授权不得转载,摘编或利用其他方式使用上述作品</p>
+                </div>
+                <div class="footer_small">
+                    <div class="footer_title">关注我们</div>
+                    <img src="http://www.7006.top/style/css/imga/r7_c1.jpg" alt="">
+                    <img src="http://www.7006.top/style/css/imga/r7_c2.jpg" alt="">
+                    <img src="http://www.7006.top/style/css/imga/r7_c3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="up">^</div>
+</div>
+<script src="js/navgation.js"></script>
+<script src="industry/contorller.js"></script>
+<script src="phone/contorller.js"></script>
+
+<script type="text/javascript">
+
+    var app = angular.module('app',[
+        'ngRoute',
+        'kuaiBo.industry',
+        'kuaiBo.phone'
+    ]);
+    app.config(['$routeProvider',function ($routeProvider) {
+        $routeProvider.otherwise({
+            redirectTo:'/industry/1'
+        });
+    }]);
+    app.controller('myController',['$scope',function ($scope) {
+
+    }]);
+
+</script>
+</body>
+</html>

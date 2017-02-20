@@ -1,22 +1,23 @@
-
-var module = angular.module('Item.View', [
+var module = angular.module('Item.b', [
     'ngRoute',
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/View/:page', {
-        templateUrl: 'View/view.html',
-        controller: 'ViewController'
+    $routeProvider.when('/b/:page', {
+        templateUrl: 'View/b.html',
+        controller: 'BController'
     });
 }]);
-module.controller('ViewController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
-    $http.get("http://localhost/Item/pHp/view.php")
+module.controller('BController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
+    $http.get("http://localhost/Item/pHp/bView.php")
         .success(function (response) {
+            console.log(response);
             var page = parseInt($routeParams.page);
             var dataArr = [];
+            var count = response.length;
             var du = 0;
             changePage(page);
             function changePage(page) {
-                if (page < 2){
+                if (page < page){
                     du = (page + 1) * 10
                     if (page < 1){
                         du = response.length;
@@ -34,9 +35,7 @@ module.controller('ViewController',["$scope","$http",'$routeParams','$route',fun
             $scope.go = function (page) {
                 switch (page){
                     case 0:
-                        console.log($scope.onePage);
                         if ($scope.onePage){
-                            console.log("ssdasd");
                             changePage(page);
                             $route.updateParams({page:page});
                             break;
