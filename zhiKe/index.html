@@ -1,1 +1,83 @@
-<h1 style="padding: 100px">{{title}}</h1>
+<div class="bg">
+    <div class="wrap-view">
+        <div class="wrap-view-left">
+            智客
+        </div>
+        <ul class="data">
+
+            <li class="data-li" ng-repeat="item in items">
+                <div class="viewing">
+                    <div class="div-img">
+
+                        <a href=""><img src="{{item.img}}" alt="" width="250px" height="165px"></a>
+                        <div class="standpoint">{{item.mark}}</div>
+                    </div>
+                </div>
+                <h3>
+                    <a href="">{{item.title}}</a>
+                </h3>
+                <p>{{item.content}}</p>
+                <span>{{item.author}}</span>
+                <span>{{item.date}}</span>
+            </li>
+        </ul>
+        <div class="pageb">
+            <a ng-click="go($index)" ng-repeat="item in arr track by $index">{{arr[$index].key+1}}</a>
+        </div>
+    </div>
+    <div class="list">
+        <div class="list-img">
+            <img src="http://www.7006.top/style/images/imgad1.gif" alt="" class="img1">
+        </div>
+        <div class="hotlist">
+            <div class="hd">
+                <ul>
+                    <li>
+                        <a href="javascript:;" class="on" style="color: rgb(139, 139, 139);">月排行</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">周排行</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" style="color: rgb(0, 170, 152);">日排行</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="com-title"><span><img src="http://www.7006.top/style/images/symbol-18.png" alt="">排行榜</span></div>
+        </div>
+        <div class="adimg2">
+            <a href="" title="" target="_blank"><img src="http://www.7006.top/style/images/img15.jpg" alt=""></a>
+        </div>
+        <div class="recommend">
+            <div class="com-title" style="margin-bottom:10px;"><span><img src="http://www.7006.top/style/images/symbol-7.png" alt="编辑推荐">编辑推荐</span></div>
+            <ul class="ulfix">
+                <li><img src="http://www.7006.top/d/file/news/shouyou/2015-03-28/606f065a8fdbd27d8acc60596312f702.jpg" alt="2015年游戏行业风向标：创业者必须关注的几个方向" width="150" height="98">
+                    <p><a href="/news/shouyou/461.html" target="_blank" title="2015年游戏行业风向标：创业者必须关注的几个方向">2015年游戏行业风向标：创业者必须关</a></p>
+                </li>
+                <li><img src="http://www.7006.top/d/file/news/shouyou/2015-03-28/f0063b44b52fece4d7a1a7e41be70d48.jpg" alt="山水文化资产遭封 游戏收购恐泡汤" width="150" height="98">
+                    <p><a href="/news/shouyou/463.html" target="_blank" title="山水文化资产遭封 游戏收购恐泡汤">山水文化资产遭封 游戏收购恐泡汤</a></p>
+                </li>
+                <li><img src="http://www.7006.top/d/file/news/mobile/2015-03-28/c193341fcbe5ddafed99b9396c343770.png" alt="三星将推Orbis智能手表" width="150" height="98">
+                    <p><a href="/news/mobile/519.html" target="_blank" title="三星将推Orbis智能手表">三星将推Orbis智能手表</a></p>
+                </li>
+                <li><img src="http://www.7006.top/d/file/news/mobile/2015-03-28/05679f7d33f1e28eb8d0b93f8c0dc67a.jpg" alt="世界上你没听说过的5款“小不点”手机" width="150" height="98">
+                    <p><a href="/news/mobile/520.html" target="_blank" title="世界上你没听说过的5款“小不点”手机">世界上你没听说过的5款“小不点”</a></p>
+                </li>
+            </ul>
+        </div>
+        <div class="adimg">
+            <img src="http://www.7006.top/style/images/imgad2.gif" alt="“" width="336" height="280">
+        </div>
+        <div class="follow">
+            <div class="com-title"><span><img src="http://www.7006.top/style/images/symbol-5.png" alt="">关注我们</span></div>
+            <div class="followcon followcon2">
+                <span>关注微信公众号，了解最新精彩内容</span>
+                <p class="">
+                    <img src="http://www.7006.top/style/images/qr1.jpg" alt="">
+                    <img src="http://www.7006.top/style/images/qr2.jpg" alt="">
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>

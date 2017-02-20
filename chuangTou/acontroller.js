@@ -1,14 +1,14 @@
-var module = angular.module('Item.View', [
-    'ngRoute',
+var module = angular.module('Item.chuangye', [
+    'ngRoute'
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/View/:page', {
-        templateUrl: 'View/view.html',
-        controller: 'ViewController'
+    $routeProvider.when('/chuangye/:page', {
+        templateUrl: 'chuangTou/chuangye.html',
+        controller: 'chuangYeController'
     });
 }]);
-module.controller('ViewController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
-    $http.get("pHp/View.php")
+module.controller('chuangYeController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
+    $http.get("pHp/chuangye.php")
         .success(function (response) {
             var page = parseInt($routeParams.page);
             var count = Math.ceil(response.length/10)
@@ -19,7 +19,6 @@ module.controller('ViewController',["$scope","$http",'$routeParams','$route',fun
                 arr.push(a);
             }
             $scope.arr = arr;
-            console.log($scope.arr[5].key);
             var dataArr = [];
             var du = 0;
             changePage(page);

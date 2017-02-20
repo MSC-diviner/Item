@@ -1,25 +1,24 @@
-var module = angular.module('Item.View', [
-    'ngRoute',
+var module = angular.module('Item.chuanmei', [
+    'ngRoute'
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/View/:page', {
-        templateUrl: 'View/view.html',
-        controller: 'ViewController'
+    $routeProvider.when('/chuanmei/:page', {
+        templateUrl: 'View/chuanmei.html',
+        controller: 'chuanMeiController'
     });
 }]);
-module.controller('ViewController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
-    $http.get("pHp/View.php")
+module.controller('chuanMeiController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
+    $http.get("pHp/cView.php")
         .success(function (response) {
             var page = parseInt($routeParams.page);
             var count = Math.ceil(response.length/10)
             var arr = [];
             for (var i = 0;i < count; i++){
-                var a = {}
-                a.key = i
+                var a = {};
+                 a.key = i;
                 arr.push(a);
             }
             $scope.arr = arr;
-            console.log($scope.arr[5].key);
             var dataArr = [];
             var du = 0;
             changePage(page);
@@ -43,3 +42,4 @@ module.controller('ViewController',["$scope","$http",'$routeParams','$route',fun
             }
         })
 }]);
+

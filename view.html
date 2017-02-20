@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="yinYong/angular.js"></script>
     <script src="yinYong/angular-route.js"></script>
+    <script src="yinYong/jquery-2.2.3.min.js"></script>
     <title>Title</title>
 </head>
 <body ng-app="app">
@@ -16,44 +17,44 @@
                 <li class="glyphicon1"><strong><a href="#/shouYe" title=""><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;首页</a ></strong>
 
                 </li>
-                <li class="glyphicon1"><strong><a href="#/View" title=""><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="#/View/0" title=""><span class="glyphicon
 glyphicon-book"></span>&nbsp;&nbsp;观点</a ></strong>
                     <dl>
                         <em></em>
-                        <dd><a href="" title="" target="_self">观点</a ></dd>
-                        <dd><a href="" title="" target="_self">电商</a ></dd>
-                        <dd><a href="" title="" target="_self">传媒</a ></dd>
-                        <dd><a href="" title="" target="_self">通信</a ></dd>
+                        <dd><a href="#/a/0" title="" target="_self">观点</a ></dd>
+                        <dd><a href="#/b/0" title="" target="_self">电商</a ></dd>
+                        <dd><a href="#/chuanmei/0" title="" target="_self">传媒</a ></dd>
+                        <dd><a href="#/jingxuan/0" title="" target="_self">通信</a ></dd>
                     </dl>
                 </li>
-                <li class="glyphicon1"><strong><a href="#/chuangTou" title=""><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="#/chuangTou/0" title=""><span class="glyphicon
 glyphicon-send"></span>&nbsp;&nbsp;创投</a ></strong>
                     <dl>
                         <em></em>
-                        <dd><a href="" title="" target="_self">创业</a ></dd>
-                        <dd><a href="" title="" target="_self">人物</a ></dd>
-                        <dd><a href="" title="" target="_self">金融</a ></dd>
-                        <dd><a href="" title="" target="_self">投资</a ></dd>
+                        <dd><a href="#/chuangye/0" title="" target="_self">创业</a ></dd>
+                        <dd><a href="#/rewu/0" title="" target="_self">人物</a ></dd>
+                        <dd><a href="#/jinrong/0" title="" target="_self">金融</a ></dd>
+                        <dd><a href="#/touzi/0" title="" target="_self">投资</a ></dd>
                     </dl>
                 </li>
-                <li class="glyphicon1"><strong><a href="#/shangye" title=""><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="#/shangye/0" title=""><span class="glyphicon
 glyphicon-list-alt"></span>&nbsp;&nbsp;商业</a ></strong>
                     <dl>
                         <em></em>
-                        <dd><a href="" title="" target="_self">商业</a ></dd>
-                        <dd><a href="" title="" target="_self">案例</a ></dd>
+                        <dd><a href="#/shangye-small/0" title="" target="_self">商业</a ></dd>
+                        <dd><a href="#/anli/0" title="" target="_self">案例</a ></dd>
                     </dl>
                 </li>
                 <!-- target="_self"只在本页面跳转-->
-                <li class="glyphicon1"><strong><a href="#/zhiKe" title=""><span class="glyphicon
+                <li class="glyphicon1"><strong><a href="#/zhike/0" title=""><span class="glyphicon
 glyphicon-th"></span>&nbsp;&nbsp;智客</a ></strong>
                     <dl>
                         <em></em>
-                        <dd><a href="" title="" target="_self">精选</a ></dd>
-                        <dd><a href="" title="" target="_self">评测</a ></dd>
+                        <dd><a href="#/jingxuan2/0" title="" target="_self">精选</a ></dd>
+                        <dd><a href="#/ceping/0" title="" target="_self">评测</a ></dd>
                     </dl>
                 </li>
-                <li class="glyphicon1"><strong><a href="#/kuaiBo"><span class="glyphicon
+                <li class="glyphicon1"><strong><a href=""><span class="glyphicon
 glyphicon-plane"></span>&nbsp;&nbsp;快报</a ></strong>
                     <dl>
                         <em></em>
@@ -81,8 +82,22 @@ glyphicon-plane"></span>&nbsp;&nbsp;快报</a ></strong>
             </div>
         </div>
     </div>
-    <div ng-view="" class="vie">
+    <div ng-view="" id="v">
 
+    </div>
+    <div class="footer">
+        <div class="wrapper">
+            <div class="lft">© 2013-2015 科讯网（www.7006.top）版权所有  备案：皖ICP备15010744号</div>
+            <div class="rgt"><a href="/aboutme/" target="_blank" title="">关于我们</a>
+                <span></span><a href="/aboutme/contact.html" target="_blank" title="">联系我们</a>
+                <span></span><a href="/aboutme/cooperation.html" target="_blank" title="">商务合作</a>
+                <span></span><a href="/aboutme/report.html" target="_blank" title="">寻求报道</a>
+                <span></span><a href="/aboutme/submission.html" target="_blank" title="">投稿须知</a>
+                <span></span><a href="/aboutme/notice.html" target="_blank" title="">版权声明</a>
+                <span></span><a href="/aboutme/sitemap.html" target="_blank" title="">网站地图</a>
+                <span></span><script src="http://s4.cnzz.com/stat.php?id=1254840138&amp;web_id=1254840138" language="JavaScript"></script><script src="http://c.cnzz.com/core.php?web_id=1254840138&amp;t=z" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1254840138" target="_blank" title="站长统计">站长统计</a>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -124,17 +139,42 @@ glyphicon-plane"></span>&nbsp;&nbsp;快报</a ></strong>
         'Item.shangye',
         'Item.View',
         "Item.zhiKe",
-        "Item.shouYe"
+        "Item.shouYe",
+        "Item.a",
+        "Item.b",
+        "Item.chuangye",
+        "Item.rewu",
+        "Item.chuanmei",
+        "Item.jingxuan",
+        "Item.jinrong",
+        "Item.touzi",
+        "Item.shangye-small",
+        "Item.anli",
+        "Item.jingxuan2",
+        "Item.ceping"
     ]);
     app.config(['$routeProvider',function ($routeProvider) {
         $routeProvider.otherwise({
-            redirectTo:'/chuangTou'
+            redirectTo:'/shouYe'
         });
     }]);
     app.controller('NavController',['$scope',function ($scope) {
 
     }]);
 </script>
+<script src="zhiKe/jingxuan2.js"></script>
+<script src="zhiKe/ceping.js"></script>
+<script src="shangye/anli.js"></script>
+<script src="shangye/ShangYe.js"></script>
+<script src="shouYe/1.js"></script>
+<script src="chuangTou/touzi.js"></script>
+<script src="chuangTou/jinrong.js"></script>
+<script src="View/jingxuan.js"></script>
+<script src="View/chuanmei.js"></script>
+<script src="chuangTou/bcontroller.js"></script>
+<script src="chuangTou/acontroller.js"></script>
+<script src="View/bcontroller.js"></script>
+<script src="View/acontroller.js"></script>
 <script src="chuangTou/contorller.js"></script>
 <script src="kuaiBo/contorller.js"></script>
 <script src="shangye/contorller.js"></script>

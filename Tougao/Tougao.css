@@ -1,0 +1,48 @@
+*{
+    margin:0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+table{
+    font: 9pt Tahoma, Verdana;
+    color: #000000;
+    margin: 0 auto;
+}
+.all{
+    width: 960px;
+    border: 0;
+}
+.all1{
+    margin-top: 10px;
+}
+tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+.tableborder {
+    background: #BAFBF4;
+    border: 1px solid #00AA98;
+}
+.tableborder1 {
+    position: relative;
+    margin-top: -200px;
+}
+.header {
+    font: 9pt Tahoma, Verdana;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #00AA98;
+}

@@ -1,14 +1,14 @@
-var module = angular.module('Item.View', [
+var module = angular.module('Item.a', [
     'ngRoute',
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/View/:page', {
-        templateUrl: 'View/view.html',
-        controller: 'ViewController'
+    $routeProvider.when('/a/:page', {
+        templateUrl: 'View/a.html',
+        controller: 'AController'
     });
 }]);
-module.controller('ViewController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
-    $http.get("pHp/View.php")
+module.controller('AController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
+    $http.get("pHp/aView.php")
         .success(function (response) {
             var page = parseInt($routeParams.page);
             var count = Math.ceil(response.length/10)
@@ -19,7 +19,7 @@ module.controller('ViewController',["$scope","$http",'$routeParams','$route',fun
                 arr.push(a);
             }
             $scope.arr = arr;
-            console.log($scope.arr[5].key);
+            console.log($scope.arr);
             var dataArr = [];
             var du = 0;
             changePage(page);

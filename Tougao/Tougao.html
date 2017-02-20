@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>增加信息</title>
+    <link rel="stylesheet" href="Tougao.css">
+</head>
+<body>
+<table class="all" align="center" cellpadding="4" cellspacing="1">
+    <tbody>
+    <tr>
+        <td width="42%"><img src="http://www.7006.top/skin/member/images/logo.jpg" width="397" height="65" border="0">
+        </td>
+        <td width="58%">
+            <table width="100%" border="0" align="right" cellpadding="3" cellspacing="1">
+                <tbody>
+                <tr>
+                    <td colspan="2">您好，<strong>游客</strong> &lt;游客&gt;</td>
+                </tr>
+                <tr>
+                    <td width="65%">[ <a href="/e/member/login/">马上登录</a> | <a href="/e/member/register/">注册帐号</a> ]
+                    </td>
+                    <td width="35%">
+                        <div align="right"><a href="/"><u>网站首页</u></a> | <a href="/e/member/cp/"><u>会员中心</u></a> | <a
+                                href="/e/member/list/"><u>会员列表</u></a></div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<table width="100%" height="7" border="0" cellpadding="3" cellspacing="1" bgcolor="#00AA98">
+    <tbody>
+    <tr>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+<table class="all" align="center" cellpadding="3" cellspacing="8">
+    <tbody>
+    <tr>
+        <td>
+            当前位置:
+            <a href="###">首页</a>
+            &nbsp;>&nbsp;
+            <a href="###">会员中心</a>
+            &nbsp;>&nbsp;
+            <a href="###">管理中心</a>
+            &nbsp;>&nbsp;增加信息&nbsp;(新闻)
+        </td>
+    </tr>
+    </tbody>
+</table>
+<table class="all" align="center" cellpadding="12" cellspacing="1" bgcolor="#BAFBF4">
+    <tbody>
+    <tr>
+        <td width="20%" valign="top" bgcolor="#FFFFFF">
+            <table width="180" border="0" align="center" cellspacing="1" cellpadding="3"
+                   class="tableborder tableborder1">
+                <tbody>
+                <tr class="header a" id="domenumemberid">
+                    <td height="25">&nbsp;&nbsp;<img src="http://www.7006.top/skin/member/images/add.gif"
+                                                     name="menumemberimg" width="20" height="9" border="0">帐号
+                    </td>
+                </tr>
+                </tbody>
+                <tbody id="domenumember" style="display: none">
+                <tr>
+                    <td bgcolor="#FFFFFF">
+                        <table width="90%" border="0" align="right" cellpadding="3" cellspacing="1">
+                            <tbody><tr>
+                                <td height="23"><a href="/e/member/login/">会员登录</a></td>
+                            </tr>
+                            <tr>
+                                <td height="23"><a href="/e/member/register/">注册帐号</a></td>
+                            </tr>
+                            </tbody></table>
+                    </td>
+                </tr>
+
+                </tbody>
+                <tbody id="domenumsg" style="display:none"></tbody>
+                <tbody>
+                <tr class="header a" id="domenuinfoid">
+                    <td height="25">&nbsp;&nbsp;<img src="http://www.7006.top/skin/member/images/noadd.gif"
+                                                     name="menuinfoimg" width="20" height="9" border="0">
+                        投稿
+                    </td>
+                </tr>
+                </tbody>
+                <tbody id="domenuinfo" style="">
+                <tr>
+                    <td bgcolor="#FFFFFF">
+                        <table width="90%" border="0" align="right" cellpadding="3" cellspacing="1">
+                            <tbody>
+                            <tr>
+                                <td width="74%" height="23"><a href="/e/DoInfo/ChangeClass.php?mid=1"><b>发布新闻</b></a>
+                                </td>
+                                <td width="26%">
+                                    <div align="right"></div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+                <tbody id="domenuspace" style="display:none">
+                </tbody>
+                <tbody id="domenupay" style="display:none">
+                </tbody>
+                <tbody>
+                <tr class="header a" id="domenushopid">
+                    <td height="25">&nbsp;&nbsp;<img src="http://www.7006.top/skin/member/images/add.gif"
+                                                     name="menushopimg" width="20" height="9" border="0">商城
+                    </td>
+                </tr>
+                </tbody>
+                <tbody id="domenushop" style="display:none">
+                <tr>
+                    <td bgcolor="#FFFFFF">
+                        <table width="90%" border="0" align="right" cellpadding="3" cellspacing="1">
+                            <tbody>
+                            <tr>
+                                <td height="23"><a href="#ecms">我的购物车</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+        <td width="80%" height="420" valign="top" bgcolor="#FFFFFF" style="display: none">
+            <table width="500" border="0" align="center">
+                <tbody>
+                <tr>
+                    <td>你好，<b>游客</b></td>
+                </tr>
+                </tbody>
+            </table>
+            <table width="500" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+                <form action="AddInfo.php" method="get" name="changeclass" id="changeclass"></form>
+                <tbody>
+                <tr class="header">
+                    <td height="23"><strong>请选择要增加信息的栏目
+                        <input name="mid" type="hidden" id="mid" value="1">
+                        <input name="enews" type="hidden" id="enews" value="MAddInfo">
+                    </strong></td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td height="32"><select name="classid" size="22" style="width:300px">
+                        <option value="1">|-观点</option>
+                        <option value="2" style="background:#99C4E3">&nbsp;&nbsp;|-观点</option>
+                        <option value="3" style="background:#99C4E3">&nbsp;&nbsp;|-电商</option>
+                        <option value="4" style="background:#99C4E3">&nbsp;&nbsp;|-传媒</option>
+                        <option value="5" style="background:#99C4E3">&nbsp;&nbsp;|-通信</option>
+                        <option value="6">|-创投</option>
+                        <option value="7" style="background:#99C4E3">&nbsp;&nbsp;|-创业</option>
+                        <option value="8" style="background:#99C4E3">&nbsp;&nbsp;|-人物</option>
+                        <option value="9" style="background:#99C4E3">&nbsp;&nbsp;|-金融</option>
+                        <option value="10" style="background:#99C4E3">&nbsp;&nbsp;|-投资</option>
+                        <option value="11">|-商业</option>
+                        <option value="12" style="background:#99C4E3">&nbsp;&nbsp;|-商业</option>
+                        <option value="13" style="background:#99C4E3">&nbsp;&nbsp;|-案例</option>
+                        <option value="14">|-智客</option>
+                        <option value="15" style="background:#99C4E3">&nbsp;&nbsp;|-精选</option>
+                        <option value="16" style="background:#99C4E3">&nbsp;&nbsp;|-评测</option>
+                    </select></td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td><input type="submit" name="Submit" value="添加信息"> <font color="#666666">(请选择终极栏目[蓝色条])</font>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </td>
+        <td width="80%" height="420" valign="top" bgcolor="#FFFFFF" style="display: block" id="keyIn">
+            <br>
+            <table width="500" border="0" align="top" cellpadding="3" cellspacing="1" class="tableborder">
+                <form name="form1" method="post" action="../doaction.php"></form>
+                <input type="hidden" name="ecmsfrom" value="">
+                <input type="hidden" name="enews" value="login">
+                <input name="tobind" type="hidden" id="tobind" value="0">
+                <tbody><tr class="header">
+                    <td height="25" colspan="2"><div align="center">会员登录</div></td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="23%" height="25">用户名：</td>
+                    <td width="77%" height="25"><input name="username" type="text" id="username" size="30">
+                    </td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td height="25">密码：</td>
+                    <td height="25"><input name="password" type="password" id="password" size="30">
+                        &nbsp;&nbsp;<a href="../GetPassword/" target="_blank">忘记密码？</a></td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td height="25">保存时间：</td>
+                    <td height="25">
+                        <input name="lifetime" type="radio" value="0" class="cookie">
+                        不保存
+                        <input type="radio" name="lifetime" value="3600" class="cookie">
+                        一小时
+                        <input type="radio" name="lifetime" value="86400" class="cookie">
+                        一天
+                        <input type="radio" name="lifetime" value="2592000" class="cookie">
+                        一个月
+                        <input type="radio" name="lifetime" value="315360000" class="cookie">
+                        永久 </td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td height="25">&nbsp;</td>
+                    <td height="25"><input type="submit" name="Submit" value=" 登 录 " id="btn">&nbsp;&nbsp;&nbsp; <input type="button" name="button" value="马上注册" id="btn1"></td>
+                </tr>
+
+                </tbody></table>
+            <br>
+        </td>
+        <td width="80%" height="420" valign="top" bgcolor="#FFFFFF" id="register" style="display: none">
+            <br>
+            <table width="500" border="0" align="top" cellpadding="3" cellspacing="1" class="tableborder">
+                <form name="form1" method="post" action="../doaction.php"></form>
+                <input type="hidden" name="ecmsfrom" value="">
+                <input type="hidden" name="enews" value="login">
+                <input name="tobind" type="hidden" id="tobind1" value="0">
+                <tbody><tr class="header">
+                    <td height="25" colspan="2"><div align="center">会员注册</div></td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="23%" height="25">用户名：</td>
+                    <td width="77%" height="25"><input name="username" type="text" id="username1" size="30">
+                    </td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td height="25">密码：</td>
+                    <td height="25"><input name="password" type="password" id="password1" size="30"></td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td height="25">验证：</td>
+                    <td height="25"><input name="password" type="password" id="password2" size="30"></td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td height="25">&nbsp;</td>
+                    <td height="25"><input type="submit" name="Submit" value=" 反 回 登 录 ">&nbsp;&nbsp;&nbsp; <input type="button" name="button" value="马上注册" id="btnRegister"></td>
+                </tr>
+
+                </tbody></table>
+            <br>
+        </td>
+    </tr>
+    </tbody>
+
+</table>
+<table width="960" border="0" align="center" cellpadding="3" cellspacing="1">
+    <tbody>
+    <tr>
+        <td height="8"></td>
+    </tr>
+    </tbody>
+</table>
+<table width="960" height="8" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#00AA98">
+    <tbody>
+    <tr>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+<table width="960" border="0" align="center" cellpadding="3" cellspacing="1">
+    <tbody>
+    <tr>
+        <td height="32">
+            <div align="center">Powered by <strong><a href="http://www.phome.net" target="_blank">EmpireCMS</a></strong>
+                7.2&nbsp; © 2002-2015 <a href="http://www.digod.com" target="_blank">EmpireSoft Inc.</a></div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<script src="../yinYong/ajax.js"></script>
+<script>
+    var As = document.getElementsByClassName("a");
+    var domenumember = document.getElementById("domenumember");
+    var domenuinfo = document.getElementById("domenuinfo");
+    var domenushop = document.getElementById("domenushop");
+    var username1 = document.getElementById("username1");
+    var username = document.getElementById("username");
+    var password1 = document.getElementById("password1");
+    var password2 = document.getElementById("password2");
+    var password = document.getElementById("password");
+    var btnRegister = document.getElementById("btnRegister");
+    var btn = document.getElementById("btn");
+    var btn1 = document.getElementById("btn1");
+    var cookies = document.getElementsByClassName("cookie");
+    var register = document.getElementById("register");
+    var keyIn = document.getElementById("keyIn");
+    var count = 0;
+    for(var i = 0;i < As.length;i++){
+        As[i].index = i;
+        As[i].onclick = function () {
+            if (this.index == 0){
+                count++;
+                if (count%2 == 1){
+                    domenumember.style.display = "block";
+                    domenushop.style.display = "none";
+                    domenuinfo.style.display = "none";
+                }else{
+                    domenuinfo.style.display = "none";
+                    domenumember.style.display = "none";
+                    domenushop.style.display = "none";
+                }
+            } else if (this.index == 1) {
+                count++;
+                if (count % 2 == 1) {
+                    console.log(this.index);
+                    console.log("hah"+count);
+                    domenuinfo.style.display = "block";
+                    domenumember.style.display = "none";
+                    domenushop.style.display = "none";
+                } else{
+                        domenuinfo.style.display = "none";
+                        domenumember.style.display = "none";
+                        domenushop.style.display = "none";
+                }
+            } else if (this.index == 2) {
+                count++;
+                if (count % 2 == 1) {
+                    domenushop.style.display = "block";
+                    domenuinfo.style.display = "none";
+                    domenumember.style.display = "none";
+                } else{
+                    domenuinfo.style.display = "none";
+                    domenumember.style.display = "none";
+                    domenushop.style.display = "none";
+                }
+            }
+        }
+    }
+    btnRegister.onclick = function () {
+        console.log(username1.value)
+        ajax("post",'logIn.php','type=0'+"&username="+username1.value+"&password1="+password1.value+"&password2="+password2.value,function (data) {
+            var isJson = JSON.parse(data);
+            if (isJson.state == 1){
+                alert(isJson.name+"注册成功");
+            }else if(isJson.state == 0){
+                alert(isJson.error);
+            }else{
+                alert(isJson.name+"注册失败");
+            }
+        })
+    }
+    btn.onclick = function () {
+        ajax("post",'logIn.php','type=1'+"&username="+username.value+"&password="+password.value,function (data) {
+
+            var isJson = JSON.parse(data);
+            console.log(isJson);
+            if (isJson.state == 3){
+                alert("登录成功");
+            }else{
+                alert("登录失败");
+            }
+        })
+        password.value = "";
+    }
+    for (var i = 0; i < cookies.length;i++){
+        cookies[i].onclick = function () {
+            alert(this.value);
+            var nowDate = new Date;
+            nowDate.setDate(nowDate.getSeconds() + this.value);
+            document.cookie = "username="+username.value+"expires="+ nowDate.toGMTString();
+            document.cookie = "password="+password.value+"expires="+ nowDate.toGMTString();
+            console.log(document.cookie);
+        }
+    }
+
+    btn1.onclick = function () {
+        register.style.display="block";
+        keyIn.style.display = "none";
+    }
+</script>
+</body>
+</html>

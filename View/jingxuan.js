@@ -1,14 +1,14 @@
-var module = angular.module('Item.View', [
-    'ngRoute',
+var module = angular.module('Item.jingxuan', [
+    'ngRoute'
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/View/:page', {
-        templateUrl: 'View/view.html',
-        controller: 'ViewController'
+    $routeProvider.when('/jingxuan/:page', {
+        templateUrl: 'View/jingxuan.html',
+        controller: 'jingXuanController'
     });
 }]);
-module.controller('ViewController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
-    $http.get("pHp/View.php")
+module.controller('jingXuanController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
+    $http.get("pHp/chuanmei.php")
         .success(function (response) {
             var page = parseInt($routeParams.page);
             var count = Math.ceil(response.length/10)
@@ -19,7 +19,6 @@ module.controller('ViewController',["$scope","$http",'$routeParams','$route',fun
                 arr.push(a);
             }
             $scope.arr = arr;
-            console.log($scope.arr[5].key);
             var dataArr = [];
             var du = 0;
             changePage(page);
@@ -35,7 +34,6 @@ module.controller('ViewController',["$scope","$http",'$routeParams','$route',fun
                 }
                 $scope.items = dataArr;
                 $scope.currentPage = page;
-                $scope.onePage = false;
             }
             $scope.go = function (page) {
                 changePage(page);
@@ -43,3 +41,4 @@ module.controller('ViewController',["$scope","$http",'$routeParams','$route',fun
             }
         })
 }]);
+

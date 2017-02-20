@@ -1,14 +1,14 @@
-var module = angular.module('Item.View', [
-    'ngRoute',
+var module = angular.module('Item.jinrong', [
+    'ngRoute'
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/View/:page', {
-        templateUrl: 'View/view.html',
-        controller: 'ViewController'
+    $routeProvider.when('/jinrong/:page', {
+        templateUrl: 'chuangTou/jinrong.html',
+        controller: 'jinRongController'
     });
 }]);
-module.controller('ViewController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
-    $http.get("pHp/View.php")
+module.controller('jinRongController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
+    $http.get("pHp/jinrong.php")
         .success(function (response) {
             var page = parseInt($routeParams.page);
             var count = Math.ceil(response.length/10)
@@ -19,7 +19,6 @@ module.controller('ViewController',["$scope","$http",'$routeParams','$route',fun
                 arr.push(a);
             }
             $scope.arr = arr;
-            console.log($scope.arr[5].key);
             var dataArr = [];
             var du = 0;
             changePage(page);
@@ -43,3 +42,5 @@ module.controller('ViewController',["$scope","$http",'$routeParams','$route',fun
             }
         })
 }]);
+
+

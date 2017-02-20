@@ -1,14 +1,14 @@
-var module = angular.module('Item.View', [
-    'ngRoute',
+var module = angular.module('Item.anli', [
+    'ngRoute'
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/View/:page', {
-        templateUrl: 'View/view.html',
-        controller: 'ViewController'
+    $routeProvider.when('/anli/:page', {
+        templateUrl: 'shangye/anli.html',
+        controller: 'anLiController'
     });
 }]);
-module.controller('ViewController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
-    $http.get("pHp/View.php")
+module.controller('anLiController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
+    $http.get("pHp/anli.php")
         .success(function (response) {
             var page = parseInt($routeParams.page);
             var count = Math.ceil(response.length/10)
@@ -19,7 +19,7 @@ module.controller('ViewController',["$scope","$http",'$routeParams','$route',fun
                 arr.push(a);
             }
             $scope.arr = arr;
-            console.log($scope.arr[5].key);
+            console.log($scope.arr);
             var dataArr = [];
             var du = 0;
             changePage(page);
