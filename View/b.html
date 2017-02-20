@@ -20,11 +20,7 @@
             </li>
         </ul>
         <div class="pageb">
-            <a ng-click="go(0)" ng-class="{dropup:true}">1</a>
-            <a ng-click="go(1)" ng-class="{dropup:page === 1}">2</a>
-            <a ng-click="go(2)" ng-class="{dropup:page === 2}">3</a>
-            <a ng-click="nextPage(currentPage + 1)">下一页</a>
-            <a ng-click="go(2)">尾页</a>
+            <a ng-click="go($index)" ng-repeat="item in arr track by $index">{{arr[$index].key+1}}</a>
         </div>
     </div>
     <div class="list">
@@ -82,18 +78,4 @@
         </div>
     </div>
 
-</div>
-<div class="footer">
-    <div class="wrapper">
-        <div class="lft">© 2013-2015 科讯网（www.7006.top）版权所有  备案：皖ICP备15010744号</div>
-        <div class="rgt"><a href="/aboutme/" target="_blank" title="">关于我们</a>
-            <span></span><a href="/aboutme/contact.html" target="_blank" title="">联系我们</a>
-            <span></span><a href="/aboutme/cooperation.html" target="_blank" title="">商务合作</a>
-            <span></span><a href="/aboutme/report.html" target="_blank" title="">寻求报道</a>
-            <span></span><a href="/aboutme/submission.html" target="_blank" title="">投稿须知</a>
-            <span></span><a href="/aboutme/notice.html" target="_blank" title="">版权声明</a>
-            <span></span><a href="/aboutme/sitemap.html" target="_blank" title="">网站地图</a>
-            <span></span><script src="http://s4.cnzz.com/stat.php?id=1254840138&amp;web_id=1254840138" language="JavaScript"></script><script src="http://c.cnzz.com/core.php?web_id=1254840138&amp;t=z" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1254840138" target="_blank" title="站长统计">站长统计</a>
-        </div>
-    </div>
 </div>

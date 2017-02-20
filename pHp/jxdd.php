@@ -1,10 +1,11 @@
 <?php
-$mysqli = new mysqli("localhost:3306","root","","Item");//创建一个并打开数据库;
+$mysqli = new mysqli("localhost:3306","root","","Item");
 if ($mysqli->connect_errno){
     die($mysqli->connect_error);
 }
 $mysqli->query("set names utf8");
-$sql = "SELECT * FROM venture WHERE mark = '人物'";
+$sql = "SELECT * FROM news WHERE mark = '手游'";
 $result = $mysqli->query($sql);
+$mysqli->close();
 $arr = $result->fetch_all(MYSQLI_ASSOC);
 echo json_encode($arr);

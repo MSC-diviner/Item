@@ -8,54 +8,38 @@ module.config(['$routeProvider', function ($routeProvider) {
     });
 }]);
 module.controller('rewuController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
-    $http.get("http://localhost/Item/pHp/dView.php")
+    $http.get("pHp/dView.php")
         .success(function (response) {
             var page = parseInt($routeParams.page);
+            var count = Math.ceil(response.length/10)
+            var arr = [];
+            for (var i = 0;i < count; i++){
+                var a = {}
+                a.key = i
+                arr.push(a);
+            }
+            $scope.arr = arr;
             var dataArr = [];
             var du = 0;
             changePage(page);
             function changePage(page) {
-                if (page < 2){
+                if (page < parseInt(response.length/10)){
                     du = (page + 1) * 10
-                    if (page < 1){
-                        du = response.length;
-                    }
+>>>>>>> 4119db9cc6be1004996b1d4af44c2e119a153fb5
                 }else {
                     du = response.length;
                 }
                 for (var i = page * 10;i < du;i++){
                     dataArr.push(response[i]);
+                    console.log(i);
                 }
                 $scope.items = dataArr;
                 $scope.currentPage = page;
                 $scope.onePage = false;
             }
             $scope.go = function (page) {
-                switch (page){
-                    case 0:
-                        console.log($scope.onePage);
-                        if ($scope.onePage){
-                            console.log("ssdasd");
-                            changePage(page);
-                            $route.updateParams({page:page});
-                            break;
-                        }
-                    case 1:
-                        changePage(page);
-                        $route.updateParams({page:page});
-                        break;
-                    case 2:
-                        changePage(page);
-                        $route.updateParams({page:page});
-                        break;
-                    default:
-                        break;
-                }
-            }
-            $scope.nextPage = function (page) {
-                if (page >= 0 && page <= 2){
-                    $route.updateParams({page:page});
-                }
+                changePage(page);
+                $route.updateParams({page:page});
             }
         })
 }]);

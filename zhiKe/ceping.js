@@ -1,24 +1,25 @@
-var module = angular.module('Item.chuanmei', [
+var module = angular.module('Item.ceping', [
     'ngRoute'
 ]);
 module.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/chuanmei/:page', {
-        templateUrl: 'View/chuanmei.html',
-        controller: 'chuanMeiController'
+    $routeProvider.when('/ceping/:page', {
+        templateUrl: 'zhiKe/ceping.html',
+        controller: 'cePingController'
     });
 }]);
-module.controller('chuanMeiController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
-    $http.get("pHp/cView.php")
+module.controller('cePingController',["$scope","$http",'$routeParams','$route',function ($scope,$http,$routeParams,$route) {
+    $http.get("pHp/ceping.php")
         .success(function (response) {
             var page = parseInt($routeParams.page);
             var count = Math.ceil(response.length/10)
             var arr = [];
             for (var i = 0;i < count; i++){
-                var a = {};
-                 a.key = i;
+                var a = {}
+                a.key = i
                 arr.push(a);
             }
             $scope.arr = arr;
+            console.log($scope.arr);
             var dataArr = [];
             var du = 0;
             changePage(page);
@@ -42,4 +43,3 @@ module.controller('chuanMeiController',["$scope","$http",'$routeParams','$route'
             }
         })
 }]);
-

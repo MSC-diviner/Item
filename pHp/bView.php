@@ -4,7 +4,7 @@ if ($mysqli->connect_errno){
     die($mysqli->connect_error);
 }
 $mysqli->query("set names utf8");
-$sql = "SELECT * FROM hotRecommend";
+$sql = "SELECT * FROM viewpoint WHERE mark = '电商'";
 $result = $mysqli->query($sql);
 $arr = $result->fetch_all(MYSQLI_ASSOC);
 echo json_encode($arr);
